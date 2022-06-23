@@ -1,0 +1,6 @@
+.idea
+itvg-venv
+data
+data.zip
+*.zip
+.DS_Store
