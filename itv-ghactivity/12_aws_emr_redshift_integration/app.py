@@ -49,18 +49,19 @@ def get_jdbc_url():
 def write_to_redshift(new_repos, jdbc_url):
     bucket_name = os.environ.get('BUCKET_NAME')
     aws_redshift_iam_role = os.environ.get('AWS_REDSHIFT_IAM_ROLE')
-    new_repos. \
-        write. \
-        mode('append'). \
-        format('io.github.spark_redshift_community.spark.redshift'). \
-        option(
-            'aws_iam_role', 
-            aws_redshift_iam_role
-        ). \
-        option('url', jdbc_url). \
-        option('dbtable', 'public.ghrepos'). \
-        option('tempdir', f's3://{bucket_name}/temp/ghrepos'). \
-        save()
+    new_repos.write.mode('overwrite').save(f's3://{bucket_name}/parquet/ghrepos')
+    # new_repos. \
+    #     write. \
+    #     mode('append'). \
+    #     format('io.github.spark_redshift_community.spark.redshift'). \
+    #     option(
+    #         'aws_iam_role', 
+    #         aws_redshift_iam_role
+    #     ). \
+    #     option('url', jdbc_url). \
+    #     option('dbtable', 'public.ghrepos'). \
+    #     option('tempdir', f's3://{bucket_name}/temp/ghrepos'). \
+    #     save()
 
 
 def main():
