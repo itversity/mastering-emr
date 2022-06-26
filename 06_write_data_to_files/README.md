@@ -7,7 +7,7 @@ Let us develop the code to write Spark Dataframe to the files using Spark Datafr
 def to_files(df, tgt_dir, file_format):
     df.coalesce(16). \
         write. \
-        partitionBy('year', 'month', 'day'). \
+        partitionBy('year', 'month', 'dayofmonth'). \
         mode('append'). \
         format(file_format). \
         save(tgt_dir)
@@ -39,25 +39,46 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-
+* First cleanup all the files in the target location.
+```
+aws s3 rm s3://aigithub/emrraw/ghactivity \
+    --recursive
+```
 * Run the application after adding environment variables. Validate for multiple days.
   * 2021-01-13
   * 2021-01-14
   * 2021-01-15
+* You can use below command for the reference.
+
+```
+export ENVIRON=DEV
+export SRC_DIR=s3://aigithub/landing/ghactivity
+export SRC_FILE_PATTERN=2021-01-13
+export SRC_FILE_FORMAT=json
+export TGT_DIR=s3://aigithub/emrraw/ghactivity
+export TGT_FILE_FORMAT=parquet
+
+spark-submit \
+    --master local \
+    app.py
+```
 * Check for files in the target location. 
 
 ```shell script
-find data/itv-github/raw/ghactivity
+aws s3 ls s3://aigithub/emrraw/ghactivity \
+    --recursive
 ```
 
 * Run below code using pyspark CLI.
 
 ```python
-file_path = 'data/itv-github/raw/ghactivity'
+file_path = 's3://aigithub/raw/ghactivity'
 df = spark.read.parquet(file_path)
 df.printSchema()
 df.show()
-df.groupBy('year', 'month', 'day').count().show()
+df. \
+    groupBy('year', 'month', 'dayofmonth'). \
+    count(). \
+    show()
 df.count()
 ```
-

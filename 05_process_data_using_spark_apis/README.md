@@ -38,3 +38,15 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+* Run the program to confirm that the changes are working as expected.
+
+```
+export ENVIRON=DEV
+export SRC_DIR=s3://aigithub/landing/ghactivity
+export SRC_FILE_PATTERN=2021-01-15
+export SRC_FILE_FORMAT=json
+
+spark-submit \
+    --master local \
+    app.py
+```
