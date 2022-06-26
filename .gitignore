@@ -6,3 +6,4 @@ data
 data.zip
 *.zip
 .DS_Store
+.env
