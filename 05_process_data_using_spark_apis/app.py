@@ -13,7 +13,7 @@ def main():
     df = from_files(spark, src_dir, file_pattern, src_file_format)
     df_transformed = transform(df)
     df_transformed.printSchema()
-    df_transformed.select('year', 'month', 'day').show()
+    df_transformed.select('repo.*', 'year', 'month', 'dayofmonth').show()
 
 
 if __name__ == '__main__':
