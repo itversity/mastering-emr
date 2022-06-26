@@ -17,43 +17,38 @@ aws s3 ls s3://aigithub/landing/ghactivity \
     --recursive|grep json.gz|wc -l
 ```
 
-* Run the application after adding environment variables. Validate for multiple days.
-  * 2021-01-13
-  * 2021-01-14
-  * 2021-01-15
-* Here are the export statements to set the environment variables.
-
-```shell script
-export ENVIRON=PROD
-export SRC_DIR=s3://aigithub/landing/ghactivity
-export SRC_FILE_FORMAT=json
-export TGT_DIR=s3://aigithub/emrraw/ghactivity
-export TGT_FILE_FORMAT=parquet
-
-export PYSPARK_PYTHON=python3
+* Run the application using Cluster Mode. Here the zip file and driver program file are in the local file system on the Master Node of the cluster.
 ```
-
-* Here are the spark submit commands to run application for 3 dates.
-
-```shell script
-export SRC_FILE_PATTERN=2021-01-13
-
-spark-submit --master yarn \
-    --py-files itv-ghactivity.zip \
-    app.py
-
-export SRC_FILE_PATTERN=2021-01-14
-
-spark-submit --master yarn \
-    --py-files itv-ghactivity.zip \
-    app.py
-
-export SRC_FILE_PATTERN=2021-01-15
-
-spark-submit --master yarn \
-    --py-files itv-ghactivity.zip \
-    app.py
+spark-submit \
+	--master yarn \
+	--deploy-mode cluster \
+	--conf "spark.yarn.appMasterEnv.ENVIRON=PROD" \
+	--conf "spark.yarn.appMasterEnv.SRC_DIR=s3://aigithub/landing/ghactivity" \
+	--conf "spark.yarn.appMasterEnv.SRC_FILE_FORMAT=json" \
+	--conf "spark.yarn.appMasterEnv.TGT_DIR=s3://aigithub/emrraw/ghactivity" \
+	--conf "spark.yarn.appMasterEnv.TGT_FILE_FORMAT=parquet" \
+	--conf "spark.yarn.appMasterEnv.SRC_FILE_PATTERN=2021-01-13" \
+	--py-files itv-ghactivity.zip \
+	app.py
 ```
+* Here are the instructions to run the application by using the zip file and the driver program from s3.
+```
+aws s3 cp itv-ghactivity.zip s3://aigithub/app/itv-ghactivity.zip
+aws s3 cp app.py s3://aigithub/app/app.py
+
+spark-submit \
+	--master yarn \
+	--deploy-mode cluster \
+	--conf "spark.yarn.appMasterEnv.ENVIRON=PROD" \
+	--conf "spark.yarn.appMasterEnv.SRC_DIR=s3://aigithub/landing/ghactivity" \
+	--conf "spark.yarn.appMasterEnv.SRC_FILE_FORMAT=json" \
+	--conf "spark.yarn.appMasterEnv.TGT_DIR=s3://aigithub/emrraw/ghactivity" \
+	--conf "spark.yarn.appMasterEnv.TGT_FILE_FORMAT=parquet" \
+	--conf "spark.yarn.appMasterEnv.SRC_FILE_PATTERN=2021-01-14" \
+	--py-files s3://aigithub/app/itv-ghactivity.zip \
+	s3://aigithub/app/app.py
+```
+* We can also run the application as step on existing EMR Cluster. We need to ensure both zip file as well as driver program file are in s3. You can use the previous command as reference. The command is supposed to be in single line discarding spark-submit, master and deploy-mode.
 * Check for files in the target location. 
 
 ```shell script
@@ -77,6 +72,6 @@ tgt_df = spark.read.parquet(tgt_file_path)
 tgt_df.printSchema()
 tgt_df.show()
 tgt_df.count()
-tgt_df.groupBy('year', 'month', 'day').count().show()
+tgt_df.groupBy('year', 'month', 'dayofmonth').count().show()
 ```
 

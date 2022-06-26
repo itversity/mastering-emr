@@ -110,6 +110,6 @@ tgt_df = spark.read.parquet(tgt_file_path)
 tgt_df.printSchema()
 tgt_df.show()
 tgt_df.count()
-tgt_df.groupBy('year', 'month', 'day').count().show()
+tgt_df.groupBy('year', 'month', 'dayofmonth').count().show()
 ```
 
