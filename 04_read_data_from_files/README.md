@@ -1,7 +1,7 @@
 # Read data from files
 
 Let us develop the code to read the data from files into Spark Dataframes.
-* Create directory for data and copy some files into it.
+* Create directory for data under **mastering-emr** and copy some files into it.
 
 ```shell script
 mkdir -p data/itv-github/landing/ghactivity
@@ -10,7 +10,12 @@ wget https://data.gharchive.org/2021-01-13-0.json.gz
 wget https://data.gharchive.org/2021-01-14-0.json.gz
 wget https://data.gharchive.org/2021-01-15-0.json.gz
 ```
-
+* Make sure to upload all the files to s3.
+```
+aws s3 cp ~/mastering-emr/data/itv-github/landing/ghactivity \
+    s3://aigithub/landing/ghactivity \
+    --recursive
+```
 * Create a Python program by name **read.py**. We will create a function by name **from_files**. It reads the data from files into Dataframe and returns it.
 
 ```python
@@ -43,4 +48,16 @@ def main():
 
 if __name__ == '__main__':
     main()
+```
+* Run the program to confirm that the changes are working as expected.
+
+```
+export ENVIRON=DEV
+export SRC_DIR=s3://aigithub/landing/ghactivity
+export SRC_FILE_PATTERN=2021-01-15
+export SRC_FILE_FORMAT=json
+
+spark-submit \
+    --master local \
+    app.py
 ```
