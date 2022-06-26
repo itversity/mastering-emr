@@ -12,6 +12,9 @@ wget https://data.gharchive.org/2021-01-15-0.json.gz
 ```
 * Make sure to upload all the files to s3.
 ```
+aws s3 rm s3://aigithub/landing/ghactivity/ \
+    --recursive
+
 aws s3 cp ~/mastering-emr/data/itv-github/landing/ghactivity \
     s3://aigithub/landing/ghactivity \
     --recursive
