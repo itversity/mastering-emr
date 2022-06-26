@@ -1,5 +1,7 @@
 .idea
 itvg-venv
+me-venv
+itv-ghactivity
 data
 data.zip
 *.zip

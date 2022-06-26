@@ -1,7 +1,8 @@
 # AWS EMR Redshift Integration
 
 Here are the steps need to be followed to validate AWS EMR and Redshift Integration.
-* Setup AWS EMR Cluster
+* Add bootstrap script to s3
+* Setup AWS EMR Cluster with Bootstrap script
 * Create Elastic Ip for Redshift Cluster
 * Setup Redshift Cluster
     * Make sure to choose non production
