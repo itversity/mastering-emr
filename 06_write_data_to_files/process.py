@@ -5,4 +5,4 @@ from pyspark.sql.functions import year, \
 def transform(df):
     return df.withColumn('year', year('created_at')). \
         withColumn('month', month('created_at')). \
-        withColumn('day', dayofmonth('created_at'))
+        withColumn('dayofmonth', dayofmonth('created_at'))
