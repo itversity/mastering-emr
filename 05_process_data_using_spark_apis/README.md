@@ -11,7 +11,7 @@ from pyspark.sql.functions import year, \
 def transform(df):
     return df.withColumn('year', year('created_at')). \
         withColumn('month', month('created_at')). \
-        withColumn('day', dayofmonth('created_at'))
+        withColumn('dayofmonth', dayofmonth('created_at'))
 ```
 
 * Call the program from **app.py**. For now review schema and data.
@@ -32,7 +32,7 @@ def main():
     df = from_files(spark, src_dir, file_pattern, src_file_format)
     df_transformed = transform(df)
     df_transformed.printSchema()
-    df_transformed.select('year', 'month', 'day').show()
+    df_transformed.select('year', 'month', 'dayofmonth').show()
 
 
 if __name__ == '__main__':
