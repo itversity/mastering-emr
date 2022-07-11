@@ -1,0 +1,26 @@
+[2022-07-02 21:35:46,806] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T16:05:44.782876+00:00 [queued]>
+[2022-07-02 21:35:46,811] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T16:05:44.782876+00:00 [queued]>
+[2022-07-02 21:35:46,811] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-02 21:35:46,811] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-07-02 21:35:46,811] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-02 21:35:46,819] {taskinstance.py:1377} INFO - Executing <Task(EmrCreateJobFlowOperator): create_job_flow> on 2022-07-02 16:05:44.782876+00:00
+[2022-07-02 21:35:46,821] {standard_task_runner.py:52} INFO - Started process 81041 to run task
+[2022-07-02 21:35:46,825] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'ai_cluster', 'create_job_flow', 'manual__2022-07-02T16:05:44.782876+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/itvghapipeline.py', '--cfg-path', '/var/folders/n4/66bq258d6xq6lscwjlgs6q500000gn/T/tmpip1q0ijx', '--error-file', '/var/folders/n4/66bq258d6xq6lscwjlgs6q500000gn/T/tmptfqjq7ca']
+[2022-07-02 21:35:46,826] {standard_task_runner.py:80} INFO - Job 6: Subtask create_job_flow
+[2022-07-02 21:35:46,861] {task_command.py:370} INFO - Running <TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T16:05:44.782876+00:00 [running]> on host itversitys-mbp.lan
+[2022-07-02 21:35:46,901] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=ai_cluster
+AIRFLOW_CTX_TASK_ID=create_job_flow
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-02T16:05:44.782876+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-07-02T16:05:44.782876+00:00
+[2022-07-02 21:35:46,901] {emr.py:323} INFO - Creating JobFlow using aws-conn-id: aws_default, emr-conn-id: emr_default
+[2022-07-02 21:35:46,905] {base.py:68} INFO - Using connection ID 'emr_default' for task execution.
+[2022-07-02 21:35:46,908] {base.py:68} INFO - Using connection ID 'aws_default' for task execution.
+[2022-07-02 21:35:46,926] {credentials.py:1311} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2022-07-02 21:35:48,580] {emr.py:337} INFO - JobFlow with id j-1TRKD1SPHI436 created
+[2022-07-02 21:35:48,597] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=ai_cluster, task_id=create_job_flow, execution_date=20220702T160544, start_date=20220702T160546, end_date=20220702T160548
+[2022-07-02 21:35:48,645] {local_task_job.py:156} INFO - Task exited with return code 0

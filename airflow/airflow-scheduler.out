@@ -1,0 +1,1078 @@
+[[34m2022-07-02 19:09:16,798[0m] {[34mscheduler_job.py:[0m696} INFO[0m - Starting the scheduler[0m
+[[34m2022-07-02 19:09:16,799[0m] {[34mscheduler_job.py:[0m701} INFO[0m - Processing each file at most -1 times[0m
+[[34m2022-07-02 19:09:16,802[0m] {[34mexecutor_loader.py:[0m105} INFO[0m - Loaded executor: SequentialExecutor[0m
+[[34m2022-07-02 19:09:16,806[0m] {[34mmanager.py:[0m160} INFO[0m - Launched DagFileProcessorManager with pid: 58267[0m
+[[34m2022-07-02 19:09:16,808[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 19:09:16,816[0m] {[34mscheduler_job.py:[0m1244} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2022-07-02 19:09:17,287[0m] {[34msettings.py:[0m55} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2022-07-02 19:09:17,291] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2022-07-02 19:12:49,002[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T13:42:47.887514+00:00 [scheduled]>[0m
+[[34m2022-07-02 19:12:49,003[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG ai_cluster has 0/16 running and queued tasks[0m
+[[34m2022-07-02 19:12:49,004[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T13:42:47.887514+00:00 [scheduled]>[0m
+[[34m2022-07-02 19:12:49,006[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='ai_cluster', task_id='create_job_flow', run_id='manual__2022-07-02T13:42:47.887514+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2022-07-02 19:12:49,007[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'ai_cluster', 'create_job_flow', 'manual__2022-07-02T13:42:47.887514+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 19:12:49,009[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'ai_cluster', 'create_job_flow', 'manual__2022-07-02T13:42:47.887514+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 19:12:49,637[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/itversity/Projects/Internal/bootcamp/itversity-material/mastering-emr/airflow/dags/itvghapipeline.py[0m
+[[34m2022-07-02 19:12:49,786[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T13:42:47.887514+00:00 [queued]> on host itversitys-mbp.lan[0m
+[[34m2022-07-02 19:12:51,800[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of ai_cluster.create_job_flow run_id=manual__2022-07-02T13:42:47.887514+00:00 exited with status success for try_number 1[0m
+[[34m2022-07-02 19:12:51,811[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=ai_cluster, task_id=create_job_flow, run_id=manual__2022-07-02T13:42:47.887514+00:00, map_index=-1, run_start_date=2022-07-02 13:42:49.805214+00:00, run_end_date=2022-07-02 13:42:51.596379+00:00, run_duration=1.791165, state=success, executor_state=success, try_number=1, max_tries=0, job_id=3, pool=default_pool, queue=default, priority_weight=1, operator=EmrCreateJobFlowOperator, queued_dttm=2022-07-02 13:42:49.004848+00:00, queued_by_job_id=2, pid=61387[0m
+[[34m2022-07-02 19:12:52,585[0m] {[34mdagrun.py:[0m562} INFO[0m - Marking run <DagRun ai_cluster @ 2022-07-02 13:42:47.887514+00:00: manual__2022-07-02T13:42:47.887514+00:00, externally triggered: True> successful[0m
+[[34m2022-07-02 19:12:52,586[0m] {[34mdagrun.py:[0m607} INFO[0m - DagRun Finished: dag_id=ai_cluster, execution_date=2022-07-02 13:42:47.887514+00:00, run_id=manual__2022-07-02T13:42:47.887514+00:00, run_start_date=2022-07-02 13:42:48.906672+00:00, run_end_date=2022-07-02 13:42:52.586043+00:00, run_duration=3.679371, state=success, external_trigger=True, run_type=manual, data_interval_start=2022-07-02 13:42:47.887514+00:00, data_interval_end=2022-07-02 13:42:47.887514+00:00, dag_hash=33693ab9e3deeaa30b7733479fc550bd[0m
+[[34m2022-07-02 19:12:52,588[0m] {[34mdag.py:[0m2927} INFO[0m - Setting next_dagrun for ai_cluster to None, run_after=None[0m
+[[34m2022-07-02 19:14:17,678[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 19:16:10,962[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T13:46:09.714765+00:00 [scheduled]>[0m
+[[34m2022-07-02 19:16:10,962[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG ai_cluster has 0/16 running and queued tasks[0m
+[[34m2022-07-02 19:16:10,962[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T13:46:09.714765+00:00 [scheduled]>[0m
+[[34m2022-07-02 19:16:10,964[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='ai_cluster', task_id='create_job_flow', run_id='manual__2022-07-02T13:46:09.714765+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2022-07-02 19:16:10,965[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'ai_cluster', 'create_job_flow', 'manual__2022-07-02T13:46:09.714765+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 19:16:10,966[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'ai_cluster', 'create_job_flow', 'manual__2022-07-02T13:46:09.714765+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 19:16:11,609[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/itversity/Projects/Internal/bootcamp/itversity-material/mastering-emr/airflow/dags/itvghapipeline.py[0m
+[[34m2022-07-02 19:16:11,759[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T13:46:09.714765+00:00 [queued]> on host itversitys-mbp.lan[0m
+[[34m2022-07-02 19:16:13,725[0m] {[34msequential_executor.py:[0m66} ERROR[0m - Failed to execute task Command '['airflow', 'tasks', 'run', 'ai_cluster', 'create_job_flow', 'manual__2022-07-02T13:46:09.714765+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py']' returned non-zero exit status 1..[0m
+[[34m2022-07-02 19:16:13,728[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of ai_cluster.create_job_flow run_id=manual__2022-07-02T13:46:09.714765+00:00 exited with status failed for try_number 1[0m
+[[34m2022-07-02 19:16:13,739[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=ai_cluster, task_id=create_job_flow, run_id=manual__2022-07-02T13:46:09.714765+00:00, map_index=-1, run_start_date=2022-07-02 13:46:11.779175+00:00, run_end_date=2022-07-02 13:46:13.480147+00:00, run_duration=1.700972, state=success, executor_state=failed, try_number=1, max_tries=0, job_id=4, pool=default_pool, queue=default, priority_weight=2, operator=EmrCreateJobFlowOperator, queued_dttm=2022-07-02 13:46:10.963602+00:00, queued_by_job_id=2, pid=64244[0m
+[[34m2022-07-02 19:16:14,639[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: ai_cluster.check_job_flow manual__2022-07-02T13:46:09.714765+00:00 [scheduled]>[0m
+[[34m2022-07-02 19:16:14,639[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG ai_cluster has 0/16 running and queued tasks[0m
+[[34m2022-07-02 19:16:14,640[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: ai_cluster.check_job_flow manual__2022-07-02T13:46:09.714765+00:00 [scheduled]>[0m
+[[34m2022-07-02 19:16:14,641[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='ai_cluster', task_id='check_job_flow', run_id='manual__2022-07-02T13:46:09.714765+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2022-07-02 19:16:14,642[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'ai_cluster', 'check_job_flow', 'manual__2022-07-02T13:46:09.714765+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 19:16:14,643[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'ai_cluster', 'check_job_flow', 'manual__2022-07-02T13:46:09.714765+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 19:16:15,252[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/itversity/Projects/Internal/bootcamp/itversity-material/mastering-emr/airflow/dags/itvghapipeline.py[0m
+[[34m2022-07-02 19:16:15,406[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: ai_cluster.check_job_flow manual__2022-07-02T13:46:09.714765+00:00 [queued]> on host itversitys-mbp.lan[0m
+[[34m2022-07-02 20:02:04,715[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of ai_cluster.check_job_flow run_id=manual__2022-07-02T13:46:09.714765+00:00 exited with status success for try_number 1[0m
+[[34m2022-07-02 20:02:04,724[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=ai_cluster, task_id=check_job_flow, run_id=manual__2022-07-02T13:46:09.714765+00:00, map_index=-1, run_start_date=2022-07-02 13:46:15.425799+00:00, run_end_date=2022-07-02 14:32:04.510371+00:00, run_duration=2749.084572, state=success, executor_state=success, try_number=1, max_tries=0, job_id=5, pool=default_pool, queue=default, priority_weight=1, operator=EmrJobFlowSensor, queued_dttm=2022-07-02 13:46:14.640781+00:00, queued_by_job_id=2, pid=64280[0m
+[[34m2022-07-02 20:02:04,736[0m] {[34mmanager.py:[0m299} ERROR[0m - DagFileProcessorManager (PID=58267) last sent a heartbeat 2749.89 seconds ago! Restarting it[0m
+[[34m2022-07-02 20:02:04,751[0m] {[34mprocess_utils.py:[0m125} INFO[0m - Sending Signals.SIGTERM to group 58267. PIDs of all processes in the group: [58267][0m
+[[34m2022-07-02 20:02:04,752[0m] {[34mprocess_utils.py:[0m80} INFO[0m - Sending the signal Signals.SIGTERM to group 58267[0m
+[[34m2022-07-02 20:02:04,969[0m] {[34mprocess_utils.py:[0m75} INFO[0m - Process psutil.Process(pid=58267, status='terminated', exitcode=0, started='19:09:16') (58267) terminated with exit code 0[0m
+[[34m2022-07-02 20:02:04,975[0m] {[34mmanager.py:[0m160} INFO[0m - Launched DagFileProcessorManager with pid: 1767[0m
+[[34m2022-07-02 20:02:04,996[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 20:02:04,999[0m] {[34mscheduler_job.py:[0m1244} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2022-07-02 20:02:05,575[0m] {[34msettings.py:[0m55} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2022-07-02 20:02:05,580] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2022-07-02 20:02:06,496[0m] {[34mdagrun.py:[0m562} INFO[0m - Marking run <DagRun ai_cluster @ 2022-07-02 13:46:09.714765+00:00: manual__2022-07-02T13:46:09.714765+00:00, externally triggered: True> successful[0m
+[[34m2022-07-02 20:02:06,497[0m] {[34mdagrun.py:[0m607} INFO[0m - DagRun Finished: dag_id=ai_cluster, execution_date=2022-07-02 13:46:09.714765+00:00, run_id=manual__2022-07-02T13:46:09.714765+00:00, run_start_date=2022-07-02 13:46:10.944186+00:00, run_end_date=2022-07-02 14:32:06.497004+00:00, run_duration=2755.552818, state=success, external_trigger=True, run_type=manual, data_interval_start=2022-07-02 13:46:09.714765+00:00, data_interval_end=2022-07-02 13:46:09.714765+00:00, dag_hash=a6df69fe1d2eaa6f8e63172a340ca9c8[0m
+[[34m2022-07-02 20:02:06,499[0m] {[34mdag.py:[0m2927} INFO[0m - Setting next_dagrun for ai_cluster to None, run_after=None[0m
+[[34m2022-07-02 20:07:05,717[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 20:12:06,096[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 20:17:06,799[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 20:22:07,606[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 20:27:08,165[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 20:32:09,084[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 20:37:09,443[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 20:42:10,356[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 20:47:11,050[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 20:52:11,244[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 20:57:11,612[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 21:02:11,763[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 21:07:12,089[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 21:12:12,832[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 21:17:13,594[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 21:22:14,349[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 21:27:15,115[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 21:32:15,980[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 21:35:45,966[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T16:05:44.782876+00:00 [scheduled]>[0m
+[[34m2022-07-02 21:35:45,966[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG ai_cluster has 0/16 running and queued tasks[0m
+[[34m2022-07-02 21:35:45,967[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T16:05:44.782876+00:00 [scheduled]>[0m
+[[34m2022-07-02 21:35:45,968[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='ai_cluster', task_id='create_job_flow', run_id='manual__2022-07-02T16:05:44.782876+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default[0m
+[[34m2022-07-02 21:35:45,969[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'ai_cluster', 'create_job_flow', 'manual__2022-07-02T16:05:44.782876+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 21:35:45,970[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'ai_cluster', 'create_job_flow', 'manual__2022-07-02T16:05:44.782876+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 21:35:46,621[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/itversity/Projects/Internal/bootcamp/itversity-material/mastering-emr/airflow/dags/itvghapipeline.py[0m
+[[34m2022-07-02 21:35:46,785[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T16:05:44.782876+00:00 [queued]> on host itversitys-mbp.lan[0m
+[[34m2022-07-02 21:35:48,812[0m] {[34msequential_executor.py:[0m66} ERROR[0m - Failed to execute task Command '['airflow', 'tasks', 'run', 'ai_cluster', 'create_job_flow', 'manual__2022-07-02T16:05:44.782876+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py']' returned non-zero exit status 1..[0m
+[[34m2022-07-02 21:35:48,815[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of ai_cluster.create_job_flow run_id=manual__2022-07-02T16:05:44.782876+00:00 exited with status failed for try_number 1[0m
+[[34m2022-07-02 21:35:48,822[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=ai_cluster, task_id=create_job_flow, run_id=manual__2022-07-02T16:05:44.782876+00:00, map_index=-1, run_start_date=2022-07-02 16:05:46.806796+00:00, run_end_date=2022-07-02 16:05:48.596818+00:00, run_duration=1.790022, state=success, executor_state=failed, try_number=1, max_tries=0, job_id=6, pool=default_pool, queue=default, priority_weight=6, operator=EmrCreateJobFlowOperator, queued_dttm=2022-07-02 16:05:45.967710+00:00, queued_by_job_id=2, pid=81041[0m
+[[34m2022-07-02 21:35:49,684[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 2 tasks up for execution:
+	<TaskInstance: ai_cluster.check_job_flow manual__2022-07-02T16:05:44.782876+00:00 [scheduled]>
+	<TaskInstance: ai_cluster.check_job_flow_terminate manual__2022-07-02T16:05:44.782876+00:00 [scheduled]>[0m
+[[34m2022-07-02 21:35:49,684[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG ai_cluster has 0/16 running and queued tasks[0m
+[[34m2022-07-02 21:35:49,685[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG ai_cluster has 1/16 running and queued tasks[0m
+[[34m2022-07-02 21:35:49,685[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: ai_cluster.check_job_flow manual__2022-07-02T16:05:44.782876+00:00 [scheduled]>
+	<TaskInstance: ai_cluster.check_job_flow_terminate manual__2022-07-02T16:05:44.782876+00:00 [scheduled]>[0m
+[[34m2022-07-02 21:35:49,687[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='ai_cluster', task_id='check_job_flow', run_id='manual__2022-07-02T16:05:44.782876+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default[0m
+[[34m2022-07-02 21:35:49,687[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'ai_cluster', 'check_job_flow', 'manual__2022-07-02T16:05:44.782876+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 21:35:49,687[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='ai_cluster', task_id='check_job_flow_terminate', run_id='manual__2022-07-02T16:05:44.782876+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2022-07-02 21:35:49,688[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'ai_cluster', 'check_job_flow_terminate', 'manual__2022-07-02T16:05:44.782876+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 21:35:49,689[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'ai_cluster', 'check_job_flow', 'manual__2022-07-02T16:05:44.782876+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 21:35:50,378[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/itversity/Projects/Internal/bootcamp/itversity-material/mastering-emr/airflow/dags/itvghapipeline.py[0m
+[[34m2022-07-02 21:35:50,534[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: ai_cluster.check_job_flow manual__2022-07-02T16:05:44.782876+00:00 [queued]> on host itversitys-mbp.lan[0m
+[[34m2022-07-02 21:48:05,180[0m] {[34msequential_executor.py:[0m66} ERROR[0m - Failed to execute task Command '['airflow', 'tasks', 'run', 'ai_cluster', 'check_job_flow', 'manual__2022-07-02T16:05:44.782876+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py']' returned non-zero exit status 1..[0m
+[[34m2022-07-02 21:48:05,181[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'ai_cluster', 'check_job_flow_terminate', 'manual__2022-07-02T16:05:44.782876+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 21:48:05,782[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/itversity/Projects/Internal/bootcamp/itversity-material/mastering-emr/airflow/dags/itvghapipeline.py[0m
+[[34m2022-07-02 21:48:05,938[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: ai_cluster.check_job_flow_terminate manual__2022-07-02T16:05:44.782876+00:00 [queued]> on host itversitys-mbp.lan[0m
+[[34m2022-07-02 21:48:07,568[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of ai_cluster.check_job_flow run_id=manual__2022-07-02T16:05:44.782876+00:00 exited with status failed for try_number 1[0m
+[[34m2022-07-02 21:48:07,570[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of ai_cluster.check_job_flow_terminate run_id=manual__2022-07-02T16:05:44.782876+00:00 exited with status success for try_number 1[0m
+[[34m2022-07-02 21:48:07,577[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=ai_cluster, task_id=check_job_flow, run_id=manual__2022-07-02T16:05:44.782876+00:00, map_index=-1, run_start_date=2022-07-02 16:05:50.553465+00:00, run_end_date=2022-07-02 16:18:04.989217+00:00, run_duration=734.435752, state=success, executor_state=failed, try_number=1, max_tries=0, job_id=7, pool=default_pool, queue=default, priority_weight=4, operator=EmrJobFlowSensor, queued_dttm=2022-07-02 16:05:49.686014+00:00, queued_by_job_id=2, pid=81112[0m
+[[34m2022-07-02 21:48:07,578[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=ai_cluster, task_id=check_job_flow_terminate, run_id=manual__2022-07-02T16:05:44.782876+00:00, map_index=-1, run_start_date=2022-07-02 16:18:05.957489+00:00, run_end_date=2022-07-02 16:18:07.341291+00:00, run_duration=1.383802, state=success, executor_state=success, try_number=1, max_tries=0, job_id=8, pool=default_pool, queue=default, priority_weight=1, operator=EmrJobFlowSensor, queued_dttm=2022-07-02 16:05:49.686014+00:00, queued_by_job_id=2, pid=91044[0m
+[[34m2022-07-02 21:48:07,590[0m] {[34mmanager.py:[0m299} ERROR[0m - DagFileProcessorManager (PID=1767) last sent a heartbeat 737.81 seconds ago! Restarting it[0m
+[[34m2022-07-02 21:48:07,605[0m] {[34mprocess_utils.py:[0m125} INFO[0m - Sending Signals.SIGTERM to group 1767. PIDs of all processes in the group: [1767][0m
+[[34m2022-07-02 21:48:07,606[0m] {[34mprocess_utils.py:[0m80} INFO[0m - Sending the signal Signals.SIGTERM to group 1767[0m
+[[34m2022-07-02 21:48:07,783[0m] {[34mprocess_utils.py:[0m75} INFO[0m - Process psutil.Process(pid=1767, status='terminated', exitcode=0, started='20:02:04') (1767) terminated with exit code 0[0m
+[[34m2022-07-02 21:48:07,788[0m] {[34mmanager.py:[0m160} INFO[0m - Launched DagFileProcessorManager with pid: 91074[0m
+[[34m2022-07-02 21:48:07,809[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 21:48:07,812[0m] {[34mscheduler_job.py:[0m1244} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2022-07-02 21:48:08,291[0m] {[34msettings.py:[0m55} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2022-07-02 21:48:08,294] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2022-07-02 21:48:09,131[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: ai_cluster.add_steps manual__2022-07-02T16:05:44.782876+00:00 [scheduled]>[0m
+[[34m2022-07-02 21:48:09,131[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG ai_cluster has 0/16 running and queued tasks[0m
+[[34m2022-07-02 21:48:09,132[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: ai_cluster.add_steps manual__2022-07-02T16:05:44.782876+00:00 [scheduled]>[0m
+[[34m2022-07-02 21:48:09,133[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='ai_cluster', task_id='add_steps', run_id='manual__2022-07-02T16:05:44.782876+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2022-07-02 21:48:09,134[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'ai_cluster', 'add_steps', 'manual__2022-07-02T16:05:44.782876+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 21:48:09,135[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'ai_cluster', 'add_steps', 'manual__2022-07-02T16:05:44.782876+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 21:48:10,304[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/itversity/Projects/Internal/bootcamp/itversity-material/mastering-emr/airflow/dags/itvghapipeline.py[0m
+[[34m2022-07-02 21:48:10,456[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: ai_cluster.add_steps manual__2022-07-02T16:05:44.782876+00:00 [queued]> on host itversitys-mbp.lan[0m
+[[34m2022-07-02 21:48:11,880[0m] {[34msequential_executor.py:[0m66} ERROR[0m - Failed to execute task Command '['airflow', 'tasks', 'run', 'ai_cluster', 'add_steps', 'manual__2022-07-02T16:05:44.782876+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py']' returned non-zero exit status 1..[0m
+[[34m2022-07-02 21:48:11,884[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of ai_cluster.add_steps run_id=manual__2022-07-02T16:05:44.782876+00:00 exited with status failed for try_number 1[0m
+[[34m2022-07-02 21:48:11,891[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=ai_cluster, task_id=add_steps, run_id=manual__2022-07-02T16:05:44.782876+00:00, map_index=-1, run_start_date=2022-07-02 16:18:10.477763+00:00, run_end_date=2022-07-02 16:18:11.618044+00:00, run_duration=1.140281, state=failed, executor_state=failed, try_number=1, max_tries=0, job_id=9, pool=default_pool, queue=default, priority_weight=3, operator=EmrAddStepsOperator, queued_dttm=2022-07-02 16:18:09.132854+00:00, queued_by_job_id=2, pid=91132[0m
+[[34m2022-07-02 21:48:15,508[0m] {[34mdagrun.py:[0m547} ERROR[0m - Marking run <DagRun ai_cluster @ 2022-07-02 16:05:44.782876+00:00: manual__2022-07-02T16:05:44.782876+00:00, externally triggered: True> failed[0m
+[[34m2022-07-02 21:48:15,509[0m] {[34mdagrun.py:[0m607} INFO[0m - DagRun Finished: dag_id=ai_cluster, execution_date=2022-07-02 16:05:44.782876+00:00, run_id=manual__2022-07-02T16:05:44.782876+00:00, run_start_date=2022-07-02 16:05:45.950167+00:00, run_end_date=2022-07-02 16:18:15.509234+00:00, run_duration=749.559067, state=failed, external_trigger=True, run_type=manual, data_interval_start=2022-07-02 16:05:44.782876+00:00, data_interval_end=2022-07-02 16:05:44.782876+00:00, dag_hash=e390dc6dd685e8a3ecd5be2de03580c9[0m
+[[34m2022-07-02 21:48:15,511[0m] {[34mdag.py:[0m2927} INFO[0m - Setting next_dagrun for ai_cluster to None, run_after=None[0m
+[[34m2022-07-02 21:51:54,443[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T16:21:53.958512+00:00 [scheduled]>[0m
+[[34m2022-07-02 21:51:54,444[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG ai_cluster has 0/16 running and queued tasks[0m
+[[34m2022-07-02 21:51:54,444[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T16:21:53.958512+00:00 [scheduled]>[0m
+[[34m2022-07-02 21:51:54,446[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='ai_cluster', task_id='create_job_flow', run_id='manual__2022-07-02T16:21:53.958512+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default[0m
+[[34m2022-07-02 21:51:54,446[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'ai_cluster', 'create_job_flow', 'manual__2022-07-02T16:21:53.958512+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 21:51:54,448[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'ai_cluster', 'create_job_flow', 'manual__2022-07-02T16:21:53.958512+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 21:51:55,009[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/itversity/Projects/Internal/bootcamp/itversity-material/mastering-emr/airflow/dags/itvghapipeline.py[0m
+[[34m2022-07-02 21:51:55,199[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: ai_cluster.create_job_flow manual__2022-07-02T16:21:53.958512+00:00 [queued]> on host itversitys-mbp.lan[0m
+[[34m2022-07-02 21:51:57,181[0m] {[34msequential_executor.py:[0m66} ERROR[0m - Failed to execute task Command '['airflow', 'tasks', 'run', 'ai_cluster', 'create_job_flow', 'manual__2022-07-02T16:21:53.958512+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py']' returned non-zero exit status 1..[0m
+[[34m2022-07-02 21:51:57,183[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of ai_cluster.create_job_flow run_id=manual__2022-07-02T16:21:53.958512+00:00 exited with status failed for try_number 1[0m
+[[34m2022-07-02 21:51:57,190[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=ai_cluster, task_id=create_job_flow, run_id=manual__2022-07-02T16:21:53.958512+00:00, map_index=-1, run_start_date=2022-07-02 16:21:55.218295+00:00, run_end_date=2022-07-02 16:21:56.976688+00:00, run_duration=1.758393, state=success, executor_state=failed, try_number=1, max_tries=0, job_id=10, pool=default_pool, queue=default, priority_weight=6, operator=EmrCreateJobFlowOperator, queued_dttm=2022-07-02 16:21:54.445475+00:00, queued_by_job_id=2, pid=94393[0m
+[[34m2022-07-02 21:51:58,005[0m] {[34mscheduler_job.py:[0m353} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: ai_cluster.check_job_flow manual__2022-07-02T16:21:53.958512+00:00 [scheduled]>[0m
+[[34m2022-07-02 21:51:58,005[0m] {[34mscheduler_job.py:[0m418} INFO[0m - DAG ai_cluster has 0/16 running and queued tasks[0m
+[[34m2022-07-02 21:51:58,006[0m] {[34mscheduler_job.py:[0m504} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: ai_cluster.check_job_flow manual__2022-07-02T16:21:53.958512+00:00 [scheduled]>[0m
+[[34m2022-07-02 21:51:58,008[0m] {[34mscheduler_job.py:[0m546} INFO[0m - Sending TaskInstanceKey(dag_id='ai_cluster', task_id='check_job_flow', run_id='manual__2022-07-02T16:21:53.958512+00:00', try_number=1, map_index=-1) to executor with priority 5 and queue default[0m
+[[34m2022-07-02 21:51:58,008[0m] {[34mbase_executor.py:[0m91} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'ai_cluster', 'check_job_flow', 'manual__2022-07-02T16:21:53.958512+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 21:51:58,009[0m] {[34msequential_executor.py:[0m59} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'ai_cluster', 'check_job_flow', 'manual__2022-07-02T16:21:53.958512+00:00', '--local', '--subdir', 'DAGS_FOLDER/itvghapipeline.py'][0m
+[[34m2022-07-02 21:51:58,674[0m] {[34mdagbag.py:[0m507} INFO[0m - Filling up the DagBag from /Users/itversity/Projects/Internal/bootcamp/itversity-material/mastering-emr/airflow/dags/itvghapipeline.py[0m
+[[34m2022-07-02 21:51:58,825[0m] {[34mtask_command.py:[0m370} INFO[0m - Running <TaskInstance: ai_cluster.check_job_flow manual__2022-07-02T16:21:53.958512+00:00 [queued]> on host itversitys-mbp.lan[0m
+[[34m2022-07-02 22:02:49,030[0m] {[34mscheduler_job.py:[0m599} INFO[0m - Executor reports execution of ai_cluster.check_job_flow run_id=manual__2022-07-02T16:21:53.958512+00:00 exited with status success for try_number 1[0m
+[[34m2022-07-02 22:02:49,038[0m] {[34mscheduler_job.py:[0m643} INFO[0m - TaskInstance Finished: dag_id=ai_cluster, task_id=check_job_flow, run_id=manual__2022-07-02T16:21:53.958512+00:00, map_index=-1, run_start_date=2022-07-02 16:21:58.843508+00:00, run_end_date=2022-07-02 16:32:44.964883+00:00, run_duration=646.121375, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=11, pool=default_pool, queue=default, priority_weight=5, operator=EmrJobFlowSensor, queued_dttm=2022-07-02 16:21:58.006825+00:00, queued_by_job_id=2, pid=94444[0m
+[[34m2022-07-02 22:02:49,049[0m] {[34mmanager.py:[0m299} ERROR[0m - DagFileProcessorManager (PID=91074) last sent a heartbeat 651.04 seconds ago! Restarting it[0m
+[[34m2022-07-02 22:02:49,064[0m] {[34mprocess_utils.py:[0m125} INFO[0m - Sending Signals.SIGTERM to group 91074. PIDs of all processes in the group: [91074][0m
+[[34m2022-07-02 22:02:49,065[0m] {[34mprocess_utils.py:[0m80} INFO[0m - Sending the signal Signals.SIGTERM to group 91074[0m
+[[34m2022-07-02 22:02:49,240[0m] {[34mprocess_utils.py:[0m75} INFO[0m - Process psutil.Process(pid=91074, status='terminated', exitcode=0, started='21:48:07') (91074) terminated with exit code 0[0m
+[[34m2022-07-02 22:02:49,245[0m] {[34mmanager.py:[0m160} INFO[0m - Launched DagFileProcessorManager with pid: 3704[0m
+[[34m2022-07-02 22:02:49,265[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 22:02:49,267[0m] {[34mscheduler_job.py:[0m1244} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2022-07-02 22:02:49,796[0m] {[34msettings.py:[0m55} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2022-07-02 22:02:49,799] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2022-07-02 22:02:58,142[0m] {[34mdagrun.py:[0m547} ERROR[0m - Marking run <DagRun ai_cluster @ 2022-07-02 16:21:53.958512+00:00: manual__2022-07-02T16:21:53.958512+00:00, externally triggered: True> failed[0m
+[[34m2022-07-02 22:02:58,143[0m] {[34mdagrun.py:[0m607} INFO[0m - DagRun Finished: dag_id=ai_cluster, execution_date=2022-07-02 16:21:53.958512+00:00, run_id=manual__2022-07-02T16:21:53.958512+00:00, run_start_date=2022-07-02 16:21:54.427509+00:00, run_end_date=2022-07-02 16:32:58.143208+00:00, run_duration=663.715699, state=failed, external_trigger=True, run_type=manual, data_interval_start=2022-07-02 16:21:53.958512+00:00, data_interval_end=2022-07-02 16:21:53.958512+00:00, dag_hash=c41876772e3fb58b96f16fff1323b739[0m
+[[34m2022-07-02 22:02:58,145[0m] {[34mdag.py:[0m2927} INFO[0m - Setting next_dagrun for ai_cluster to None, run_after=None[0m
+[[34m2022-07-02 22:07:50,043[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 22:12:50,149[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 22:17:51,022[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-02 22:22:51,867[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 09:17:13,129[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 09:53:20,396[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 09:58:20,430[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 10:03:20,461[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 10:08:20,919[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 10:13:20,960[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 10:18:20,993[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 10:23:21,055[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 10:28:21,091[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 10:33:21,127[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 10:38:21,101[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 10:43:21,137[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 10:48:21,170[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 10:53:21,126[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 10:58:21,160[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 11:03:21,192[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 11:08:21,280[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 11:13:21,312[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 11:18:21,344[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 11:23:21,417[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 11:28:21,456[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 11:33:21,490[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 11:38:21,523[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 11:43:21,555[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 11:48:21,588[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 11:53:21,670[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 11:58:21,710[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 19:59:30,872[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 20:04:30,895[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 20:09:30,930[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 20:14:30,844[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 20:19:30,876[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 20:24:30,906[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 20:29:30,848[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 20:34:30,878[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 20:39:30,905[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 20:44:30,927[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 20:49:30,953[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 20:54:30,983[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 20:59:31,013[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 21:11:44,101[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 21:16:44,134[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 21:21:44,166[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 21:26:44,236[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 21:31:44,270[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 21:36:44,299[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 21:41:44,284[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 21:46:44,316[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 21:51:44,347[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 21:56:44,307[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 22:01:44,331[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 22:06:44,354[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-03 22:11:44,391[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 05:15:41,475[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 05:15:41,480[0m] {[34mscheduler_job.py:[0m1244} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2022-07-04 07:15:18,486[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 07:20:18,508[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 07:25:18,531[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 07:30:18,610[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 07:35:18,634[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 07:40:18,657[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 07:45:18,732[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 07:50:18,760[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 07:55:18,788[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 08:00:18,819[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 08:05:18,845[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 08:27:23,975[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 08:32:24,021[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 08:37:24,050[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 08:42:25,244[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 08:47:25,273[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 08:52:25,305[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 08:57:25,350[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 09:02:25,384[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 09:07:25,663[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 09:12:25,711[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 09:17:25,745[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 09:22:25,776[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 09:27:25,837[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 09:32:25,873[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 09:37:25,909[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 09:42:26,016[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 09:47:26,054[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 09:52:26,094[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 09:57:26,134[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 10:02:27,083[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 10:07:27,121[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 10:12:27,162[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 10:17:27,156[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 10:22:27,176[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 10:27:27,208[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 10:32:27,175[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 10:37:27,204[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 10:42:27,217[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 10:47:27,218[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 10:52:27,255[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 10:57:27,283[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 11:02:27,391[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 11:07:27,424[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 11:12:27,457[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 11:17:27,534[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 11:22:27,572[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 11:27:27,611[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 11:32:27,651[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 11:37:27,688[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 11:42:27,728[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 11:47:27,806[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 11:52:27,847[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 11:57:27,889[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 12:02:27,958[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 12:07:28,000[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 12:12:28,039[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 12:17:28,091[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 12:22:28,134[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 12:27:28,177[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 12:32:28,088[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 12:37:28,119[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 12:42:28,147[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 12:47:28,034[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 12:52:28,050[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 12:57:28,066[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 13:02:27,989[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 13:07:28,001[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 13:12:28,017[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 16:29:42,399[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 16:29:42,403[0m] {[34mscheduler_job.py:[0m1244} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2022-07-04 16:34:42,439[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 16:39:42,480[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 16:44:42,518[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 16:49:42,402[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 16:54:42,429[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 16:59:42,455[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 17:04:42,481[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 17:09:42,508[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 17:14:42,536[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 17:19:42,701[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 17:24:42,728[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 17:35:44,335[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 17:40:44,365[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 17:58:29,886[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 18:03:29,918[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 18:08:29,947[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 18:13:29,990[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 18:18:30,968[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 18:23:31,004[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 18:28:31,052[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 18:33:31,096[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 18:38:31,127[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 18:43:31,149[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 18:48:31,168[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 18:53:31,201[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 21:47:27,821[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-04 21:52:27,845[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 00:57:05,353[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 00:57:05,368[0m] {[34mscheduler_job.py:[0m1244} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2022-07-05 03:12:21,344[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 03:17:21,384[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 04:21:53,704[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 04:26:53,743[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 07:01:28,812[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 07:06:28,842[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 07:11:28,873[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 07:16:28,902[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 07:21:28,938[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 07:26:28,972[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 07:31:29,008[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 07:36:29,038[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 07:41:29,074[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 08:07:07,631[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 08:07:07,634[0m] {[34mscheduler_job.py:[0m1244} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2022-07-05 08:12:07,661[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 08:17:07,690[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 08:22:07,718[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 08:27:07,976[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 08:32:07,998[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 08:37:08,028[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 08:42:08,042[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 08:47:08,064[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 08:52:08,088[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 08:57:08,153[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 09:02:08,174[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 09:07:08,200[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 09:12:08,303[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 09:17:08,332[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 09:22:08,362[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 09:27:08,455[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 09:32:08,489[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 09:37:08,520[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 09:42:08,527[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 09:47:08,560[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 09:52:08,586[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 09:57:08,634[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 10:02:08,664[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 10:07:08,693[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 10:12:08,744[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 10:17:08,775[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 10:22:08,803[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 10:27:08,809[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 10:32:08,842[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 10:37:08,878[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 10:42:08,983[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 10:47:09,030[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 10:52:09,070[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 10:57:09,147[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 11:02:09,183[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 11:07:09,218[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 11:12:09,216[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 11:17:09,248[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 11:22:09,260[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 11:27:09,270[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 11:32:09,299[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 11:37:09,331[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 11:42:09,361[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 11:47:09,389[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 11:52:09,420[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 11:57:09,429[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 12:02:09,449[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 12:07:09,476[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 12:12:09,503[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 12:17:09,516[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 12:22:09,543[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 12:27:09,569[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 12:32:09,598[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 12:37:09,636[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 12:42:09,667[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 12:58:15,680[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 13:03:15,713[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 13:08:15,746[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 13:13:15,843[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 13:18:15,877[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 13:23:15,909[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 13:28:15,970[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 13:33:16,008[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 13:38:16,044[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 13:43:16,051[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 13:48:16,087[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 13:53:16,123[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 13:58:16,191[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 14:03:16,212[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 15:25:43,828[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 15:30:43,870[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 15:35:43,900[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 15:40:43,958[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 15:45:43,989[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 15:50:44,020[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 15:55:44,096[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 16:00:44,132[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 16:05:44,166[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 16:10:44,235[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 16:15:44,273[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 16:20:44,309[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 16:25:44,346[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 16:30:44,391[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 16:35:44,895[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 16:40:44,872[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 16:45:44,908[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 16:50:44,942[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 16:55:44,928[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 17:00:44,960[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 17:05:44,992[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 17:10:45,054[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 19:50:12,265[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 19:55:12,300[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 20:00:12,335[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 20:05:12,386[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 20:29:37,265[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 20:34:37,292[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 20:39:37,319[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 20:44:37,346[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 20:49:37,370[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 20:54:37,397[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 20:59:37,412[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 21:04:37,442[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 21:15:30,196[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 21:20:30,220[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 21:25:30,245[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 21:30:30,288[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 21:35:30,289[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 21:40:30,315[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-05 21:45:30,349[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 03:31:51,534[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 03:36:51,584[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 03:41:51,616[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 03:46:51,649[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 03:51:51,745[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 03:56:51,782[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 04:01:51,816[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 04:06:51,878[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 04:11:51,913[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 08:22:40,350[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 08:27:40,374[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 08:32:40,402[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 08:37:40,555[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 08:42:40,584[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 08:47:40,614[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 08:52:40,701[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 08:57:40,731[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 09:02:40,757[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 09:07:40,786[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 09:12:40,871[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 09:17:41,698[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 09:22:41,732[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 09:27:41,767[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 09:32:41,800[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 09:37:41,830[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 09:42:41,761[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 09:47:41,795[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 09:52:41,825[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 09:57:41,929[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 10:02:41,959[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 10:07:41,990[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 10:12:42,060[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 10:17:42,094[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 10:22:42,130[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 10:27:42,201[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 10:32:42,237[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 10:37:42,272[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 10:42:42,318[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 10:47:42,349[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 10:52:42,381[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 10:57:42,376[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 11:02:42,406[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 11:07:42,436[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 11:12:42,425[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 11:17:42,464[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 11:22:42,494[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 11:27:42,496[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 11:32:42,527[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 11:37:42,556[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 11:42:42,567[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 11:47:42,593[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 11:52:42,622[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 11:57:42,636[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 12:02:42,666[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 12:07:42,671[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 12:12:42,709[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 12:17:42,738[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 12:22:42,768[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 12:27:42,823[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 12:32:42,858[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 12:37:42,891[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 12:42:42,938[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 12:57:32,038[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 13:02:32,071[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 13:07:32,105[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 13:12:32,178[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 13:17:32,218[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 13:22:32,260[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 13:28:41,200[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 15:17:02,761[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 17:18:50,567[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 17:23:50,603[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 17:28:50,639[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 17:33:50,608[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 17:38:50,637[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 17:43:50,665[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 17:48:50,705[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 17:53:50,736[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 17:58:50,764[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 18:03:50,784[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 18:08:50,813[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 18:13:50,842[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 18:18:50,828[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 18:23:50,850[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 18:28:50,877[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 18:33:50,901[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 18:38:50,928[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 18:43:50,999[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 18:48:51,018[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 18:53:51,034[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 18:58:51,048[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 19:03:51,077[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 19:08:51,093[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 19:13:51,119[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 19:18:51,147[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 19:23:51,238[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 19:28:51,272[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 20:56:51,879[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 21:01:51,915[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 21:06:51,951[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 21:11:52,229[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 21:16:52,265[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 21:21:52,301[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 21:26:52,336[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 21:31:52,369[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 21:36:52,411[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 21:41:52,435[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 21:46:52,471[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 21:51:52,515[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 21:56:52,435[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 22:01:52,470[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 22:06:52,504[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 22:11:52,483[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 22:16:52,508[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 22:21:52,535[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 22:26:52,630[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-06 22:32:33,925[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 01:34:20,504[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 02:57:20,527[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 03:02:20,551[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 03:07:20,574[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 03:12:20,599[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 03:17:20,627[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 03:22:20,655[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 03:27:20,678[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 03:32:20,702[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 03:37:20,733[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 03:42:20,749[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 03:47:20,770[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 03:52:20,797[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 03:57:20,827[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 04:02:20,857[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 04:07:20,886[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 04:12:20,922[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 04:17:20,954[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 04:22:20,993[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 05:34:09,686[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 06:59:00,151[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 07:04:00,311[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 07:09:00,341[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 07:14:00,228[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 07:19:00,253[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 07:24:00,274[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 07:29:00,252[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 07:34:00,275[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 07:39:00,293[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 07:44:00,362[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 07:49:00,388[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 07:54:33,181[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 07:54:33,186[0m] {[34mscheduler_job.py:[0m1244} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2022-07-07 08:27:09,791[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 08:32:09,822[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 09:30:38,351[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 09:35:38,391[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 09:57:19,070[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 10:02:19,107[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 10:07:19,141[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 10:12:19,185[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 10:17:19,219[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 10:22:19,257[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 10:27:19,297[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 10:32:19,331[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 10:37:19,363[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 10:42:19,362[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 10:47:19,395[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 10:52:19,426[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 10:57:19,434[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 11:02:19,464[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 11:07:19,500[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 11:12:19,534[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 11:17:19,566[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 11:22:19,598[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 11:27:19,583[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 11:32:19,612[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 11:37:19,635[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 11:42:20,420[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 11:47:20,448[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 11:52:20,476[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 11:57:20,494[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 12:02:20,521[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 12:07:20,550[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 12:12:20,632[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 12:17:20,661[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 12:22:20,690[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 12:27:20,723[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 12:32:20,756[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 12:37:20,790[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 12:42:20,821[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 14:12:44,714[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 14:12:44,716[0m] {[34mscheduler_job.py:[0m1244} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2022-07-07 14:17:44,905[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 16:00:35,412[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 16:05:35,438[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 16:10:35,461[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 16:15:35,466[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 16:20:35,491[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 16:25:35,516[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 16:30:35,621[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 16:35:35,638[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 16:40:35,663[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 16:45:35,728[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 16:50:35,756[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 16:55:35,786[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 17:00:35,843[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 17:05:35,874[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 19:01:31,315[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 19:06:31,342[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 19:11:31,370[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 19:16:31,425[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 19:21:32,310[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 19:26:32,339[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 19:31:32,375[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 19:36:32,409[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 19:41:32,443[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 19:46:32,462[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 20:08:16,504[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 20:13:16,536[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 20:18:16,565[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 20:23:16,613[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 20:28:16,645[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 20:33:16,676[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 20:38:16,681[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 20:43:16,707[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 20:48:16,738[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 20:53:16,748[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 20:58:16,776[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 21:03:16,813[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 21:08:16,896[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 21:13:16,931[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 21:18:16,963[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 21:23:17,021[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 21:28:17,056[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 21:33:17,090[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 21:38:17,074[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 21:43:17,098[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-07 22:50:05,799[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 02:49:52,489[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 04:52:36,036[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 05:54:29,106[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 05:59:29,138[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 06:04:29,163[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 06:09:30,441[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 06:14:30,481[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 06:19:30,508[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 06:24:30,534[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 06:29:30,570[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 06:34:30,598[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 06:39:30,627[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 06:47:04,942[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 06:52:04,955[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 06:57:04,985[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 07:02:05,018[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 07:07:05,066[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 07:12:05,093[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 07:20:47,739[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 07:25:47,776[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 07:30:47,812[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 07:35:47,833[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 07:40:47,865[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 07:45:47,910[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 07:50:47,949[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 07:55:47,985[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 08:00:48,021[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 08:05:48,062[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 08:10:48,086[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 08:18:19,565[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 08:23:19,602[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 08:28:19,637[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 08:33:19,672[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 08:38:19,703[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 08:43:19,740[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 08:48:20,527[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 08:53:20,544[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 08:58:20,581[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 09:03:20,607[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 09:08:20,630[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 09:13:20,664[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 09:18:20,883[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 09:23:20,941[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 09:28:20,971[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 09:50:25,893[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 09:55:25,922[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 10:00:25,953[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 10:05:26,000[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 10:10:26,030[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 10:15:26,062[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 10:20:26,107[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 10:25:26,128[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 10:30:26,163[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 10:35:26,162[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 10:40:26,188[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 10:45:26,234[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 10:50:26,791[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 10:55:26,817[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 11:00:26,846[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 11:05:26,874[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 11:10:26,909[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 11:15:26,944[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 11:20:26,975[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 11:25:27,017[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 11:30:27,050[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 11:35:27,084[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 11:40:27,092[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 11:45:27,125[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 11:50:27,158[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 11:55:27,973[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 12:00:28,005[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 12:05:28,036[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 12:10:28,106[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 12:15:28,139[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 12:20:28,174[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 12:25:28,175[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 12:30:28,207[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 12:35:28,241[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 12:40:28,272[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 12:45:28,317[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 12:50:28,354[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 12:55:28,390[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 13:00:28,434[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 13:05:28,465[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 13:10:28,498[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 13:15:28,888[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 13:20:28,924[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 13:25:28,956[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 13:30:29,003[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 13:35:29,044[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 13:40:29,083[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 13:45:29,118[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 13:50:29,153[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 13:55:29,193[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 14:00:29,222[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 14:05:29,255[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 14:10:29,295[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 14:15:29,331[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 14:20:29,367[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 14:25:29,408[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 15:02:32,160[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 15:07:32,192[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 15:12:32,222[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 15:17:32,249[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 15:22:32,279[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 15:27:32,310[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 15:32:32,339[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 15:37:32,352[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 15:42:32,380[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 15:47:32,408[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 15:52:32,450[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 15:57:32,483[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 16:02:32,518[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 16:07:32,533[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 16:12:32,564[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 16:17:32,592[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 16:22:32,614[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 16:27:32,644[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 16:32:32,674[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 16:37:32,712[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 16:42:32,742[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 16:47:32,772[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 16:52:32,817[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 16:57:32,848[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 17:02:32,878[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 17:07:32,976[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 17:12:33,006[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 17:17:33,039[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 17:22:33,083[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 17:27:33,117[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 17:32:33,149[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 17:37:33,185[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 17:42:33,220[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 17:47:33,272[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 17:52:33,313[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 17:57:33,610[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 18:02:33,602[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 18:07:33,639[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 18:12:33,672[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 18:17:33,700[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 18:22:33,736[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 18:27:33,771[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 18:32:33,808[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 18:37:33,844[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 18:42:33,877[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 18:47:33,893[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 18:52:33,923[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 18:57:33,961[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 19:02:33,960[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 19:07:33,992[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 19:12:34,025[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 19:17:34,051[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 19:22:34,085[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 19:28:18,175[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 19:33:18,211[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 19:38:18,250[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 19:43:18,304[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 19:48:18,344[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 19:53:18,388[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 19:58:18,448[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 20:03:18,486[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 20:08:18,524[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 20:13:18,572[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 20:18:18,609[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 20:23:18,649[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 20:28:18,644[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 20:33:18,677[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 20:38:18,710[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 20:43:18,724[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 20:48:18,757[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 20:53:18,787[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 20:58:18,828[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 21:03:18,863[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 21:08:18,902[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 21:13:19,026[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 21:18:19,058[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 21:23:19,097[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 21:28:19,103[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 21:33:19,140[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 21:38:19,173[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 21:43:19,196[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 21:48:19,228[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 21:53:19,265[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 21:58:19,334[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-08 22:47:22,763[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 02:25:23,564[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 04:50:18,309[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 04:55:18,334[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 05:00:18,362[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 05:05:18,419[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 05:10:18,446[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 05:15:18,474[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 05:20:18,526[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 05:25:18,555[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 05:30:18,584[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 05:35:18,667[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 05:40:18,698[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 05:45:18,728[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 05:50:18,778[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 05:55:18,809[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 06:18:58,290[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 06:23:58,311[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 06:28:58,343[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 06:33:58,357[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 06:38:58,381[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 06:43:58,411[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 06:48:58,448[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 06:53:58,490[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 06:58:58,519[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 11:06:45,027[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 11:11:45,061[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 11:16:45,093[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 11:21:45,125[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 11:26:45,159[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 11:31:45,194[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 11:36:45,214[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 11:41:45,239[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 11:46:45,272[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 11:51:45,291[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 11:56:45,315[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 12:01:45,346[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 12:06:45,367[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 12:11:45,393[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 12:16:45,422[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 12:21:45,453[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 12:26:45,484[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 12:31:45,514[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 12:40:30,747[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 12:45:30,780[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 12:50:30,815[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 12:55:30,855[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 13:00:30,887[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 13:05:30,922[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 13:14:18,988[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 13:19:19,022[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 13:24:19,048[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 14:47:21,325[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 14:52:21,342[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 14:57:21,377[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 15:02:21,417[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 15:07:21,455[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 15:12:21,487[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 15:17:21,521[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 15:22:21,563[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 15:27:21,599[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 15:32:21,633[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 15:37:21,633[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 15:42:21,666[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 15:47:21,698[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 15:52:21,740[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 15:57:21,778[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 16:02:21,809[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 16:07:21,810[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 16:12:21,838[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 16:17:21,868[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 16:22:21,919[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 16:27:21,954[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 16:32:21,986[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 16:37:22,010[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 16:42:22,043[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 16:47:22,264[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 16:52:22,286[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 16:57:22,316[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 17:02:22,346[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 17:07:22,366[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 17:12:22,396[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 17:17:22,426[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 17:22:22,489[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 17:27:22,521[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 17:32:22,556[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 17:37:22,618[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 17:42:22,659[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 17:47:22,687[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 18:08:48,977[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 18:13:49,006[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 18:18:49,036[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 18:23:49,064[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 18:37:26,445[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 21:00:20,670[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 21:05:20,715[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 21:10:20,746[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 21:15:20,776[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 21:20:20,771[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 21:25:20,802[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 21:30:20,834[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 21:35:20,863[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 21:40:20,861[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 21:45:20,889[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 21:50:20,919[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 21:55:20,941[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 22:00:20,969[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 22:05:21,001[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 22:10:21,000[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-09 22:15:21,029[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 04:13:30,411[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 04:18:30,440[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 04:23:30,469[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 04:28:30,497[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 04:33:30,524[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 04:38:30,549[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 04:43:30,567[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 04:48:30,594[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 04:53:30,622[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 04:58:30,634[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 05:03:30,664[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 05:08:30,699[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 05:13:30,722[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 05:18:30,747[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 05:23:30,774[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 05:28:30,801[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 06:01:42,773[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 06:23:08,983[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 07:03:18,830[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 08:12:38,103[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 08:17:38,143[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 08:22:38,177[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 10:15:48,505[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 12:56:04,277[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 13:01:04,298[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 13:06:04,323[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 13:11:04,432[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 13:16:04,462[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 13:21:04,492[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 13:26:04,498[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 13:31:04,529[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 13:36:04,556[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 13:41:04,620[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 13:46:04,652[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 13:51:04,681[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 15:14:22,362[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 15:19:22,387[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 15:27:05,227[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 15:32:05,268[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 15:37:05,293[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 15:47:21,971[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 15:52:21,992[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 15:57:22,011[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 16:02:22,061[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 16:07:22,090[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 16:12:22,123[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 16:17:22,153[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 16:22:22,185[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 16:27:22,218[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 16:32:22,264[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 16:37:22,299[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 16:42:22,334[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 16:47:22,413[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 16:52:55,395[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 16:57:55,439[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 17:21:15,155[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 17:26:15,205[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 17:31:15,244[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 18:10:54,318[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 20:59:04,115[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 21:05:04,907[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 21:10:04,933[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 21:15:04,979[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 21:20:05,005[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 21:25:05,034[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 21:30:05,086[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 21:35:05,114[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 21:40:05,143[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 21:45:05,186[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-10 21:50:05,215[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 01:54:28,141[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 01:54:28,183[0m] {[34mscheduler_job.py:[0m1244} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2022-07-11 06:18:59,717[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 06:23:59,760[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 06:28:59,786[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 06:33:59,861[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 06:38:59,886[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 06:43:59,915[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 06:49:00,121[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 06:54:00,193[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 06:59:00,221[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 07:04:00,251[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 07:09:00,280[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 07:14:00,310[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 07:19:00,326[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 07:24:00,349[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2022-07-11 07:29:00,381[0m] {[34mscheduler_job.py:[0m1221} INFO[0m - Resetting orphaned tasks for active dag runs[0m

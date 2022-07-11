@@ -1,0 +1,34 @@
+[2022-07-02 21:48:10,477] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ai_cluster.add_steps manual__2022-07-02T16:05:44.782876+00:00 [queued]>
+[2022-07-02 21:48:10,483] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ai_cluster.add_steps manual__2022-07-02T16:05:44.782876+00:00 [queued]>
+[2022-07-02 21:48:10,483] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-02 21:48:10,483] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-07-02 21:48:10,483] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-02 21:48:10,491] {taskinstance.py:1377} INFO - Executing <Task(EmrAddStepsOperator): add_steps> on 2022-07-02 16:05:44.782876+00:00
+[2022-07-02 21:48:10,494] {standard_task_runner.py:52} INFO - Started process 91132 to run task
+[2022-07-02 21:48:10,498] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'ai_cluster', 'add_steps', 'manual__2022-07-02T16:05:44.782876+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/itvghapipeline.py', '--cfg-path', '/var/folders/n4/66bq258d6xq6lscwjlgs6q500000gn/T/tmprebl_t60', '--error-file', '/var/folders/n4/66bq258d6xq6lscwjlgs6q500000gn/T/tmprrh6t2mr']
+[2022-07-02 21:48:10,499] {standard_task_runner.py:80} INFO - Job 9: Subtask add_steps
+[2022-07-02 21:48:10,530] {task_command.py:370} INFO - Running <TaskInstance: ai_cluster.add_steps manual__2022-07-02T16:05:44.782876+00:00 [running]> on host itversitys-mbp.lan
+[2022-07-02 21:48:10,605] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=ai_cluster
+AIRFLOW_CTX_TASK_ID=add_steps
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-02T16:05:44.782876+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-07-02T16:05:44.782876+00:00
+[2022-07-02 21:48:10,610] {base.py:68} INFO - Using connection ID 'aws_default' for task execution.
+[2022-07-02 21:48:10,634] {credentials.py:1311} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2022-07-02 21:48:10,671] {emr.py:104} INFO - Adding steps to j-1TRKD1SPHI436
+[2022-07-02 21:48:11,613] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/itversity/Projects/Internal/bootcamp/itversity-material/mastering-emr/me-venv/lib/python3.9/site-packages/airflow/providers/amazon/aws/operators/emr.py", line 112, in execute
+    response = emr.add_job_flow_steps(JobFlowId=job_flow_id, Steps=steps)
+  File "/Users/itversity/Projects/Internal/bootcamp/itversity-material/mastering-emr/me-venv/lib/python3.9/site-packages/botocore/client.py", line 508, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/Users/itversity/Projects/Internal/bootcamp/itversity-material/mastering-emr/me-venv/lib/python3.9/site-packages/botocore/client.py", line 915, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationException) when calling the AddJobFlowSteps operation: A job flow that is shutting down, terminated, or finished may not be modified.
+[2022-07-02 21:48:11,618] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=ai_cluster, task_id=add_steps, execution_date=20220702T160544, start_date=20220702T161810, end_date=20220702T161811
+[2022-07-02 21:48:11,643] {standard_task_runner.py:92} ERROR - Failed to execute job 9 for task add_steps (An error occurred (ValidationException) when calling the AddJobFlowSteps operation: A job flow that is shutting down, terminated, or finished may not be modified.; 91132)
+[2022-07-02 21:48:11,682] {local_task_job.py:156} INFO - Task exited with return code 1
