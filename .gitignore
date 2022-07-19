@@ -2,7 +2,7 @@
 itvg-venv
 me-venv
 itv-ghactivity
-data
+./data
 data.zip
 *.zip
 .DS_Store
