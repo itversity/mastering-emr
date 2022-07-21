@@ -2,7 +2,7 @@
 itvg-venv
 me-venv
 itv-ghactivity
-./data
+data/itv-github
 data.zip
 *.zip
 .DS_Store
